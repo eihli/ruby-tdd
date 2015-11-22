@@ -4,9 +4,11 @@ describe TicTacToe do
 
   before :each do
     @game = TicTacToe.new
-    @game.initialize_players("Eric", "Taylor")
+    @game.initialize_players
   end
 
+  # TODO: http://stackoverflow.com/questions/16948645/how-do-i-test-a-function-with-gets-chomp-in-it
+  # hijack and mock user input for testing
   it "returns a game" do
     expect(@game).to be_an_instance_of(TicTacToe)
     expect(@game.board).to be_an_instance_of(Board)

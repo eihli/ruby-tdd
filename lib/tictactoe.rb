@@ -8,9 +8,14 @@ class TicTacToe
     @board = Board.new
   end
 
-  def initialize_players(player1Name, player2Name)
-    @player1 = Player.new player1Name
-    @player2 = Player.new player2Name
+  def get_player_name(prompt)
+    puts prompt
+    gets.chomp
+  end
+
+  def initialize_players
+    @player1 = Player.new get_player_name("Enter name for player 1")
+    @player2 = Player.new get_player_name("Enter name for player 2")
   end
 
 end
