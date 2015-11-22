@@ -4,6 +4,10 @@
 
 Brush up on Ruby/Rspec in prep for brushing up on Rails.
 
+##Development
+
+Run `bundle exec guard` to automatically watch for file changes and run tests.
+
 ##TODO:
 
 ###MVP
