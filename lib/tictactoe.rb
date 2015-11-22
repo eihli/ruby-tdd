@@ -1,3 +1,6 @@
+require "player"
+require "board"
+
 class TicTacToe
 
   attr_reader :board
@@ -25,26 +28,6 @@ class TicTacToe
   def alertTooManyPlayers
     # TODO: Ask if they want to change a name or start a new game.
     puts "You already have two players."
-  end
-
-end
-
-class Player
-
-  attr_reader :name
-
-  def initialize(name)
-    @name = name
-  end
-
-end
-
-class Board
-
-  attr_reader :state
-
-  def initialize
-    @state = Array.new(3){Array.new(3){nil}}
   end
 
 end
