@@ -24,10 +24,6 @@
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
 
-guard :shell do
-  watch(%r{(.+)\.rb$}) { |m| "#{m}git status\n" }
-end
-
 guard :rspec, cmd: 'rspec' do
   watch(%r{^lib/(.+)\.rb$}) { |m| "spec/#{m[1]}_spec.rb" }
   watch(%r{^spec/.+\.rb$})
