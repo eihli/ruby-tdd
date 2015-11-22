@@ -12,8 +12,8 @@ Run `bundle exec guard` to automatically watch for file changes and run tests.
 
 ###MVP
 
-- Start game in console.
-- Prompt for player names
+- ~~Start game in console.~~
+- ~~Prompt for player names~~
 - Display empty board
 - Prompt each player for moves
 - Detect winner
@@ -22,8 +22,9 @@ Run `bundle exec guard` to automatically watch for file changes and run tests.
 ###Engineering tasks
 
 - ~~Automate testing~~
-- Figure out classes and functionality
+- ~~Figure out classes~~
 - Display board in some pretty format
+- Pseudocode base functionality
 
 ###Backlog
 

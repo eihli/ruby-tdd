@@ -1,5 +1,5 @@
-require "player"
-require "board"
+require_relative "./player"
+require_relative "./board"
 
 class TicTacToe
 
@@ -13,6 +13,7 @@ class TicTacToe
   end
 
   def get_player_name(prompt)
+    print prompt
     return $stdin.gets.chomp
   end
 
