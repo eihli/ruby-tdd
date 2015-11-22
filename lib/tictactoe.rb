@@ -8,7 +8,6 @@ class TicTacToe
     @board = Board.new
     @player1 = Player.new player1Name
     @player2 = Player.new player2Name
-    print @board
   end
 
 end

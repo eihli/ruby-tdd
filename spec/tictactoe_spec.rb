@@ -1,4 +1,4 @@
-require "./tictactoe"
+require_relative "../lib/tictactoe"
 
 describe TicTacToe do
 
