@@ -1,8 +1,8 @@
 class TestIO
 
   def test_io_pipe
-    input = gets.chomp
-    puts input
+    puts gets.chomp
+    puts gets.chomp
   end
-  
+
 end

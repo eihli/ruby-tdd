@@ -18,6 +18,7 @@ end
 #Let's test it out! Run `ruby spikes/io.pipe.rb`!
 with_stdin do |user|
   user.puts "user input"
+  user.puts "user input 2"
   # Test to make sure it works if we call gets.chomp from another file.
   io.test_io_pipe
   # puts gets.chomp

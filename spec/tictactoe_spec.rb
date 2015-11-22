@@ -3,14 +3,11 @@ require_relative "../lib/tictactoe"
 describe TicTacToe do
 
   before :each do
-    @game = TicTacToe.new
     with_stdin do |user|
       user.puts "Eric"
-      name = @game.get_player_name "Enter player 1 name"
-      @game.initialize_player(name)
       user.puts "Taylor"
-      name = @game.get_player_name "Enter player 2 name"
-      @game.initialize_player(name)
+      @game = TicTacToe.new
+      @game.initialize_players
     end
   end
 
@@ -35,14 +32,12 @@ describe TicTacToe do
 
   it "won't allow more than two players" do
     with_stdin do |user|
-      user.puts("Alice")
-      expect {
-        @game.initialize_player(@game.get_player_name "Enter player 3 name")
-        }.to output("You already have two players.\n").to_stdout
-      expect(@game.players.length).to eq(2)
-      expect(@game.players[0].name).to eq("Eric")
-      expect(@game.players[1].name).to eq("Taylor")
+      user.puts "Alice"
+      @game.initialize_players
     end
+    expect(@game.players.length).to eq(2)
+    expect(@game.players[0].name).to eq("Eric")
+    expect(@game.players[1].name).to eq("Taylor")
   end
 
   def with_stdin
