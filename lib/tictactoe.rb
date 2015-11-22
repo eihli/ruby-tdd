@@ -4,8 +4,11 @@ class TicTacToe
   attr_reader :player1
   attr_reader :player2
 
-  def initialize(player1Name, player2Name)
+  def initialize
     @board = Board.new
+  end
+
+  def initialize_players(player1Name, player2Name)
     @player1 = Player.new player1Name
     @player2 = Player.new player2Name
   end
