@@ -6,7 +6,10 @@ describe TicTacToe do
     @game = TicTacToe.new
     with_stdin do |user|
       user.puts "Eric"
-      name = @game.get_player_name "Enter player name"
+      name = @game.get_player_name "Enter player 1 name"
+      @game.initialize_player(name)
+      user.puts "Taylor"
+      name = @game.get_player_name "Enter player 2 name"
       @game.initialize_player(name)
     end
   end
@@ -24,8 +27,22 @@ describe TicTacToe do
   end
 
   it "has two players" do
-    expect(@game.player1).to be_an_instance_of(Player)
-    expect(@game.player1.name).to eq("Eric")
+    expect(@game.players.length).to eq(2)
+    expect(@game.players[0]).to be_an_instance_of(Player)
+    expect(@game.players[0].name).to eq("Eric")
+    expect(@game.players[1].name).to eq("Taylor")
+  end
+
+  it "won't allow more than two players" do
+    with_stdin do |user|
+      user.puts("Alice")
+      expect {
+        @game.initialize_player(@game.get_player_name "Enter player 3 name")
+        }.to output("You already have two players.\n").to_stdout
+      expect(@game.players.length).to eq(2)
+      expect(@game.players[0].name).to eq("Eric")
+      expect(@game.players[1].name).to eq("Taylor")
+    end
   end
 
   def with_stdin

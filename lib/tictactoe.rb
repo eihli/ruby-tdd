@@ -9,8 +9,7 @@ class TicTacToe
   end
 
   def get_player_name(prompt)
-    puts prompt
-    gets.chomp
+    return $stdin.gets.chomp
   end
 
   def initialize_player(playerName)
