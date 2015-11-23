@@ -10,6 +10,7 @@ class TicTacToe
     @board = Board.new
     @players = []
     @active_player = 0
+    @winner = nil
     initialize_players
   end
 

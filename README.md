@@ -14,6 +14,7 @@ Run `bundle exec guard` to automatically watch for file changes and run tests.
 
 - * Prompt each player for moves
 - Detect winner
+  - I know there are easier ways to do this, but I want to use the Observer pattern.
 - Prompt to play another game
 - ~~Display empty board~~
 - ~~Start game in console.~~

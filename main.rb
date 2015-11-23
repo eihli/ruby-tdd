@@ -10,10 +10,9 @@ puts "Good luck."
 
 game.board.render
 
-# Prompt player 1 for move
-  # After each move, there will be internal work to check to see if
-  # there is a winner.
-# Prompt player 2 for move.
+# While there is no winner
+  # Prompt player 1 for move
+  # Prompt player 2 for move.
 
 # When there is a winner, congratulate them and ask if they
 # want to start a new game.

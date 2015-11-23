@@ -53,6 +53,7 @@ GEM
     rspec-support (3.4.1)
     shellany (0.0.1)
     slop (3.6.0)
+    spy (0.4.2)
     thor (0.19.1)
 
 PLATFORMS
@@ -61,6 +62,7 @@ PLATFORMS
 DEPENDENCIES
   guard-rspec
   guard-shell
+  spy
 
 BUNDLED WITH
    1.10.6
