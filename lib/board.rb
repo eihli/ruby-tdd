@@ -6,8 +6,15 @@ class Board
     @state = Array.new(3){Array.new(3){nil}}
   end
 
+  # TODO: Refactor this so we can just call @board.state.to_s or something?
   def render
-    puts "[[nil, nil, nil],\n [nil, nil, nil],\n [nil, nil, nil]]"
+    output = "["
+    @state.each do |row|
+      output += row.to_s + ",\n "
+    end
+    output = output[0...-3]
+    output += "]"
+    puts output
   end
 
 end
