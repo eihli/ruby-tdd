@@ -30,7 +30,9 @@ describe TicTacToe do
     end
   end
 
-  
+  it "is notified when a cell on board is set" do
+    @game.board.set(1, 1, 'X')
+  end
 
   # Helper function to mock input for tests.
   # http://stackoverflow.com/questions/16948645/how-do-i-test-a-function-with-gets-chomp-in-it
