@@ -24,11 +24,4 @@ class TicTacToe
     end
   end
 
-  # If there are too many players, let the user know.
-  # Return control to the program.
-  def alertTooManyPlayers
-    # TODO: Ask if they want to change a name or start a new game.
-    puts "You already have two players."
-  end
-
 end
