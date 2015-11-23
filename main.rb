@@ -6,6 +6,9 @@ game = TicTacToe.new
 game.initialize_players
 
 # Display welcome message and game board.
+puts "Good luck."
+
+game.board.render
 
 # Prompt player 1 for move
   # After each move, there will be internal work to check to see if

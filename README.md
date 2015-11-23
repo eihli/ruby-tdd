@@ -12,18 +12,18 @@ Run `bundle exec guard` to automatically watch for file changes and run tests.
 
 ###MVP
 
-- * Display empty board
-- Prompt each player for moves
+- * Prompt each player for moves
 - Detect winner
 - Prompt to play another game
+- ~~Display empty board~~
 - ~~Start game in console.~~
 - ~~Prompt for player names~~
 
 ###Engineering tasks
 
 - Look into hirb for pretty printing https://github.com/cldwalker/hirb/tree/master#readme
-- Display board in some pretty format
 - Pseudocode base functionality
+- ~~Display board in some pretty format~~
 - ~~Automate testing~~
 - ~~Figure out classes~~
 

@@ -9,6 +9,7 @@ class TicTacToe
   def initialize
     @board = Board.new
     @players = []
+    @active_player = 0
     initialize_players
   end
 
@@ -22,6 +23,15 @@ class TicTacToe
       @players << (Player.new(get_player_name "Enter player 1 name: "))
       @players << (Player.new(get_player_name "Enter player 2 name: "))
     end
+  end
+
+  def prompt_player_for_move
+    puts "Enter location you would like to claim."
+    return $stdin.gets.chomp
+  end
+
+  def update_board(row, col, mark)
+    board.set(row, col, mark)
   end
 
 end

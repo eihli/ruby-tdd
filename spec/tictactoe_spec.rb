@@ -11,8 +11,6 @@ describe TicTacToe do
     end
   end
 
-  # TODO: http://stackoverflow.com/questions/16948645/how-do-i-test-a-function-with-gets-chomp-in-it
-  # hijack and mock user input for testing
   it "returns a game with board" do
     expect(@game).to be_an_instance_of(TicTacToe)
     expect(@game.board).to be_an_instance_of(Board)
@@ -25,6 +23,17 @@ describe TicTacToe do
     expect(@game.players[1].name).to eq("Taylor")
   end
 
+  it "can prompt player for move" do
+    with_stdin do |user|
+      user.puts "1, 1"
+      expect(@game.prompt_player_for_move).to eq('1, 1')
+    end
+  end
+
+  
+
+  # Helper function to mock input for tests.
+  # http://stackoverflow.com/questions/16948645/how-do-i-test-a-function-with-gets-chomp-in-it
   def with_stdin
     stdin = $stdin
     $stdin, write = IO.pipe

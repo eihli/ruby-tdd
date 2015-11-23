@@ -17,4 +17,14 @@ class Board
     puts output
   end
 
+  def get(row, col)
+    return @state[row][col]
+  end
+  
+  def set(row, col, mark)
+    unless @state[row][col]
+      @state[row][col] = mark
+    end
+  end
+
 end
